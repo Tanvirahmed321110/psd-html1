@@ -1,0 +1,58 @@
+@media screen and (min-width:250px) and (max-width:991px){
+    .logo h3{font-size: 22px;
+        letter-spacing: 0;
+    }
+    .logo h3::first-letter{
+        font-size: 31px;
+        color: #aa2424;
+        letter-spacing: 0;
+    }
+    .medial-header-right{
+      width: 60%;
+    }
+    .medial-header-right  a{
+        margin-right: -2px;
+      }
+      
+      /* top header */
+      .top-header-container {
+        padding-top: 15px;
+      }
+      
+      /* menu -- */
+      .menu-container{
+        background: none;
+        padding: 0;
+        margin: 0;
+        min-height:10px;
+      }
+      .menu-container ul{
+        flex-direction: column;
+      }
+      .menu-container::after{
+        background: none;
+      }
+      /* drop down */
+      .menu-container .drop{
+        position: absolute;
+        flex-direction: column;
+        background-color: #9c2424;
+        width:60%px;
+        border-radius: 1px;
+        display: none;
+        z-index: 12;
+    }
+
+    .menu-container #ddd:hover .drop{
+        display: block;
+        padding: 0;margin: 0;
+        width: 80%;
+    }
+    .menu-container #ddd:hover .drop li a{
+        color: white;
+    }
+    #ddd li:hover{
+        border-bottom: 1px solid orange;
+    }
+    
+}

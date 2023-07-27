@@ -1,0 +1,630 @@
+/* ==========================
+     Common css 
+   ==========================
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color:#666;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: sans-serif;
+    overflow-x:hidden;
+}
+.container{
+    max-width: 960px;
+    width: 95%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+
+/* ==========================
+     top header start here
+   ==========================
+*/
+#top-header{  
+    background-color:#ba2e1f;
+    width: 100%;
+    padding: 15px 0;
+}
+.top-header-container{
+    display: flex;
+    justify-content: space-between;
+}
+.top-header-left{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.top-header-left ul{
+    display: flex;
+}
+.top-header-left ul li{
+    margin-right: 15px;
+    position: relative;
+}
+.top-header-left ul li::after{
+    content: "";
+    position: absolute;
+    background-color: aliceblue;
+    height: 11px;
+    width: 1px;
+    top: 8px;
+    right:-8px;
+}
+.top-header-left ul li:last-child::after{
+    display: none;
+}
+.top-header-left a{
+    color: white;
+    font-size: 14px;
+    transition: .4s linear;
+}
+.top-header-left a:hover{
+    border-bottom: 1px solid wheat;
+    /* padding-top: 3px; */
+}
+
+/*  --- top header right ---- */
+.top-header-right{
+    width: 30%;
+}
+.top-header-right form{
+    background-color: white;
+    border-radius: 20px;
+    width:100%;
+    padding:3%;
+    display: flex;
+}
+.top-header-right input{
+    border:none;
+    color: black;
+    width: 75%;
+    padding: 1% 4%;
+    outline: none;
+}
+.top-header-right input[type="submit"]{
+    width: 25%;
+    cursor: pointer;
+    background: url(s.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 2%;
+}
+
+
+
+
+/* ==========================
+     medial header start here
+   ==========================
+*/
+.medial-header{
+    width: 100%;
+}
+.medial-header-container{
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.medial-header-left{
+    width: 50%;
+}
+.logo h3::first-letter{
+    font-size:47px;
+    color: rgb(44, 41, 41);
+}
+.logo h3{
+    padding-bottom: 7px;
+    font-size: 36px;
+    color: black;
+    letter-spacing: .5px;   
+    font-weight: 600;
+}
+.logo p{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+
+.medial-header-right{
+    width: 50%;
+    text-align: right;
+}
+.medial-header-right-container a i{
+    text-align: center;
+    color: white;
+    display: inline-block;
+    width: 31px;
+    height: 28px;
+    border-radius: 50%;
+    background: #333;
+    padding-top: 6px;
+    margin-left: 10px;
+    transition: all .4s li;
+}
+.medial-header-right-container a i:hover{
+    background: #ba2e1f;
+    color: rgb(127, 241, 19);
+    transform: scale(1.05);
+}
+
+
+
+
+/* ==========================
+     medial header start here
+   ==========================
+*/
+#menu{
+    width: 100%;
+}
+.menu-container{
+    padding: 15px 0;
+    background: #333;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    border-radius: 6px;
+    min-height: 33px;
+}
+.menu-container::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:#2b2b2b;
+    height: 50%;
+    width: 100%;
+    border-radius: 6px;
+    z-index: -1;
+}
+.menu-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-container ul li{
+    margin: 0 10px;
+    position: relative;
+}
+.menu-container ul li a{
+   color: white;
+   font-size: 13px;
+   transition: .4s;
+}
+.menu-container ul li:hover a{
+    color: #ba2e1f;
+}
+
+
+
+
+/* drop two */
+.ddd2{
+    position: relative;
+}
+
+.menu-container .drop2{ 
+    display:none;
+}
+.ddd2:hover .drop2 {
+    display:flex;
+    position: absolute;
+    width: 141px;
+    background-color: orange;
+    flex-direction: column;
+}
+.menu-container .drop2 li{
+    background-color: #2b2b2b;
+    width: 90%;
+    margin: 1px 0;
+    border-radius: 3px;
+}
+.ddd2:hover .drop2 li a{
+    color: wheat;
+}
+
+.drop2 li:hover {
+    background-color: rgb(160, 44, 236);
+}
+
+
+/* --- drop down menu- 1-- */
+.menu-container .drop{
+    position: absolute;
+    flex-direction: column;
+    background-color: #9c2424;
+    width: 133px;
+    border-radius: 1px;
+    display: none;
+}
+.menu-container #ddd:hover .drop{
+    display: block;
+}
+.menu-container #ddd:hover .drop li a{
+    color: white;
+}
+#ddd li:hover{
+    border-bottom: 1px solid orange;
+}
+
+
+
+
+/* ==========================
+     tslider start here
+   ==========================
+*/
+#slider{
+    margin: 22px 0;
+    height: 600px;
+    padding: 44px;
+}
+#slider img{
+    width: 100%;
+    height:500px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+
+/* ==========================
+     tslider start here
+   ==========================
+*/
+#banner{margin-bottom: 55px;}
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.banner-img{
+    width: 45%;
+    height: 400px;
+    box-shadow: 0px 3px 4px;
+    border-radius: 12px;
+}
+.banner-text h2{
+    font-size: 76px;
+    color: black;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin-bottom: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.banner-text p{
+    font-size: 15px;
+    padding-bottom: 20px;
+}.banner-text a{
+    text-align: right;
+    display: block;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.banner-text a:hover{
+    color: black;
+}
+
+
+
+
+/* ==========================
+     .work container  start here
+   ==========================
+*/
+.work-container{
+    width: 83%;
+    margin: 0 auto;
+    background:#f8f8f8;
+    margin-top: -50px;
+}
+.work-item{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:25px;
+    padding: 60px 0;
+    height: 570px;
+}
+.work-item h2{
+    color: #333;
+    font-size: 28px;
+    padding-bottom: 34px;
+    font-weight: normal;
+}
+.work-item p{
+    font-size: 15px;
+}
+.work-item a{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #ba2e1f;
+}
+.about-us p{
+    padding: 10px 0;
+}
+.about-us img{
+    border: 1px solid lavender;
+    border-radius: 15px;
+    height:190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* services  */
+.service-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgb(236, 232, 232);
+    margin: 23px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .7s linear;
+}
+.services :nth-child(2){
+    margin-top:0px;
+}
+.service-item:hover{
+    border: 1px solid gray;
+    background-color: rgb(214, 219, 219);
+}
+.service-item img{
+    width: 24%;
+    object-fit: cover;
+    object-position: center;
+    height: 70px;
+}
+.service-item h3{
+    color: #666;
+    font-size: 16px;
+}
+.service-item p{
+    line-height: 19px;
+    font-size: 14px;
+}
+.services a{
+    display: block !important;
+    padding-top: 22px ;
+    
+}
+
+
+/* client say */
+.fa-quote-left{
+    color: #d8cdcd;
+    font-size: 48px;
+}
+.client-say-container h3{
+    padding-bottom: 12px;
+    color: #aaa5a5;
+}
+.client-say-container span{
+    font-weight: normal;
+    opacity: .8;
+}
+.client{
+    padding-top: 22px;
+}
+.client a{
+    padding-top: 21px;
+}
+.client-container{
+    margin-top: -22px;
+}
+
+
+
+
+
+/* ==========================
+     footer start here
+   ==========================
+*/
+.footer-item-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    padding-top: 65px;
+}
+.footer-item-container h2{
+    font-size: 19px;
+    border-top: 2px solid brown;
+    padding-top: 14px;
+    font-weight: 600;
+    padding-bottom: 27px;
+    word-spacing: 4px;
+}
+.footer-item-latest a{
+    text-decoration: underline;
+}
+.footer-item-latest p span{
+    font-size: 12px;
+    color: #9c2424;
+}
+.footer-item-latest p{
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+
+/* footer-item-link */
+.footer-item-link a{
+    color: #7a5c5c;
+}
+.footer-item-link li{
+    border-bottom: 1px solid #aa2424;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    font-size: 15px;
+}
+.footer-item-link li:hover a{
+    color: blue;
+}
+
+
+/* footer-item-blog */
+footer{
+    background-color: #c4c0c0;
+}
+.footer-item-blog h4{
+    font-size: 15px;
+    color: #ba2e1f;
+}
+.footer-item-blog small{
+    display: block;
+    font-size: 12px;
+    color: #aa2424;
+    line-height: 16px;
+    padding: 10px 0;
+}
+.footer-item-blog small span {
+    font-weight: 600;
+}
+.footer-item-blog big{
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+}
+.footer-item-blog a{
+    display: block;
+    color: #ca1515;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* footer-item-contact */
+.footer-item-contact{
+    box-sizing: border-box;
+}
+.footer-item-contact form input{
+        background-color: #f1efef;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        outline:none;
+}
+.footer-item-contact form textarea{
+    background-color: #f1efef;
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+}
+.footer-item-contact input[type="submit"]{
+    background-color: #4137d4;
+    padding: 10px 10px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    outline:none;
+    transition: all .5s linear;
+}
+.footer-item-contact input[type="submit"]:hover{
+    background-color: black;
+}
+.footer-item-contact input:focus{
+    border: 1px solid blue;
+}
+.footer-item-contact textarea:focus{
+    border: 1px solid blue;
+}
+
+
+/* last part copy right */
+.copy-right{
+    display: flex;
+    justify-content: space-between;
+}
+.copy-right p{
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid blueviolet;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    line-height: 15px;
+}
+
+
+
+
+
+/* ==========================
+     responsive in header
+   ==========================
+*/
+
+
+/* .dropdown-1{
+    background-color: #a52315;
+    width: 180px;
+    position: absolute;
+    flex-direction: column;
+}
+.dropdown-1 li{
+    border-bottom: 1px solid orange;
+    display: block !important;
+    width: 100%;
+}
+.dropdown-1 li:hover{
+    background-color: red;
+    color: white !important ;
+}
+
+.dropdown-1 li a:hover{
+    color: white !important ;
+}
+#ddd-1{
+    position:relative;
+}
+.menu-container ul li:hover ul li a{
+    color: white;
+}
+.menu-container ul li:hover .sub-drop{
+    color: white;
+    display: block !important;
+}
+.sub-drop{
+    display: none !important;
+    position: absolute;
+    background-color: orange;
+    left: 180px;
+    width: 106px;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+} */
