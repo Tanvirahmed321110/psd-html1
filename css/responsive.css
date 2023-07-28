@@ -102,6 +102,8 @@
     border: 1px solid rgb(236, 222, 222);
     background-color: rgb(237, 240, 240);
   }
+  
+ 
 }
 
 /* mini mobile screen */
@@ -159,6 +161,7 @@
     font-size: 48px;
    }
    
+   /* banner */
    #banner{
     margin-bottom: 150px;
    }
@@ -179,5 +182,14 @@
   }
   .copy-right p{
     margin-bottom:  2px;
+  }
+  
+   /* card item */
+   .card-all-items{
+    flex-direction: column;
+    gap: 45px;
+  }
+  .card-item{
+    width: 99%;
   }
 }
